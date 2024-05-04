@@ -1,1 +1,7 @@
--- Supplementary Material --
+#include("../appendix/meeting_log.typ")
+#pagebreak()
+#include("../appendix/technical_documentation.typ")
+#pagebreak()
+#include("../appendix/code.typ")
+#pagebreak()
+#include("../appendix/additional_diagrams.typ")

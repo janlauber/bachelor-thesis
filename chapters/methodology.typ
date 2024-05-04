@@ -19,10 +19,10 @@ The development of the One-Click Deployment system followed an iterative and agi
 
 == Tools and Technologies Used
 The development of the One-Click Deployment system utilized a range of tools and technologies, selected for their efficiency, robustness, and compatibility with OSS deployment requirements.
-- *Kubernetes*: As the backbone of the system, Kubernetes was used for orchestrating container deployment, scaling, and management.
-- *Docker*: Docker was employed for containerizing applications, ensuring consistency across different deployment environments.
-- *Operator SDK*: The Operator SDK facilitated the development of the Kubernetes operator, a key component of the system that automates the deployment and management processes.
-- *Svelte and Pocketbase*: The frontend of the system was developed using Svelte, a modern framework for building web applications, while Pocketbase served as the backend database and API server.
-- *Git and GitHub*: Git was used for version control, with GitHub hosting the project's code repository and facilitating collaboration among developers.
+- *Kubernetes @Kubernetes*: As the backbone of the system, Kubernetes was used for orchestrating container deployment, scaling, and management.
+- *Docker @Docker2022*: Docker was employed for containerizing applications, ensuring consistency across different deployment environments.
+- *Operator SDK @OperatorSDK*: The Operator SDK facilitated the development of the Kubernetes operator, a key component of the system that automates the deployment and management processes.
+- *Svelte @Svelte and Pocketbase @PocketBase*: The frontend of the system was developed using Svelte, a modern framework for building web applications, while Pocketbase served as the backend database and API server.
+- *Git @Git and GitHub @GitHub*: Git was used for version control, with GitHub hosting the project's code repository and facilitating collaboration among developers.
 - *CI/CD Tools*: Continuous Integration and Continuous Deployment were achieved using tools like GitHub Actions, automating the testing and deployment of code changes.
 By leveraging these tools and technologies, the One-Click Deployment system aims to provide a simplified, efficient, and scalable solution for OSS deployment, addressing the identified challenges and gaps in the current ecosystem.

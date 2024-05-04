@@ -11,7 +11,7 @@ The following diagram shows how and what the One-Click operator manages.
 Every Kubernetes resource will get created and managed within a Kubernetes namespace named with the *project ID*
 
 #figure(
-  image("../figures/system-architecture-and-design.png", width: 80%),
+  image("../figures/system-architecture-and-design.png", width: 100%),
   caption: "System Architecture and Design"
 )
 
