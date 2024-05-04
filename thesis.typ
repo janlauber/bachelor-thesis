@@ -39,6 +39,20 @@
   submissionDate: submissionDate
 )
 
-= Introduction
-
-
+#include("chapters/introduction.typ")
+#pagebreak()
+#include("chapters/literature_review.typ")
+#pagebreak()
+#include("chapters/methodology.typ")
+#pagebreak()
+#include("chapters/system_architecture_and_design.typ")
+#pagebreak()
+#include("chapters/implementation.typ")
+#pagebreak()
+#include("chapters/evaluation.typ")
+#pagebreak()
+#include("chapters/customer_use_cases.typ")
+#pagebreak()
+#include("chapters/discussion.typ")
+#pagebreak()
+#include("chapters/conclusion.typ")
