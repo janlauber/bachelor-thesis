@@ -1,0 +1,10 @@
+// Enter your thesis data here:
+#let titleEnglish = "Title"
+#let subTitleEnglish = "Subtitle"
+#let degree = "Bachelor"
+#let program = "BsC Computer Science"
+#let advisor = "Advisor"
+#let expert = "Expert"
+#let author = "Your Name"
+#let submissionDate = "13.06.2024"
+#let projectPartner = "Company"
