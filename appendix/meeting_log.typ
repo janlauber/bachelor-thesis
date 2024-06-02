@@ -107,3 +107,35 @@
 - Fix some bugs in the project
   - Typo in the delete page of the deployment
   - Auto Image Update is not working when configured for multiple deployments
+
+=== 2024-05-22
+*Participants*
+- Jan Lauber
+- Erik Graf
+
+*Topics*
+- Improvements to One-Click.dev:
+  - Highlighting its power: all the benefits of Kubernetes without the hassle, cloud-agnostic, non-proprietary
+  - University's interest in a Kubernetes cluster that is easy to configure
+    - Automatic lifetime management of 12 months for VMs
+  - One-Click as an enterprise edition:
+    - Automatic cleanup and policy management
+    - Pricing between 5-10k EUR/year
+  - Identifying champions for the platform
+
+- Preparation and practice for the presentation:
+  - Emphasizing the business case
+  - Preparing for a deeper business-technical defense presentation
+
+- Administrative tasks:
+  - Sending the PDF document
+  - Book entry
+  - Creating a marketing video featuring the BFH logo
+
+*Action Items*
+- Highlight improvements to One-Click.dev in the presentation
+- Emphasize ease of use and enterprise features in marketing materials
+- Prepare and practice the presentation with a focus on the business case and technical depth
+- Send the required PDF document
+- Make a book entry
+- Create and distribute a marketing video with the BFH logo

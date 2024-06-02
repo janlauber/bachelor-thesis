@@ -57,7 +57,7 @@
   // --- Table of Contents ---
   outline(
     title: {
-      text(font: body-font, 1.5em, weight: 700, "Contents")
+      text(font: body-font, 1.5em, weight: 700, "Table of Contents")
       v(15mm)
     },
     indent: 2em,
