@@ -12,17 +12,19 @@ The evaluation of the One-Click Deployment system employs precisely defined crit
   - *Code Quality Analysis:* Utilizing CodeFactor @CodefactorAnalysisTools2022 to scrutinize the quality of the system's codebase, including the Kubernetes operator. This analysis helps identify potential issues in the code such as complexity, maintainability, and security vulnerabilities.
   - *Scalability Testing:* Conducting load tests to evaluate the system's performance under varying loads, ensuring that it can handle multiple concurrent deployments without compromising performance.
 
+#pagebreak()
+
 == Testing Methodology
 
 The methodology integrates specific software tools and manual testing to provide a comprehensive evaluation of the One-Click Deployment system:
 
 - *User Experience Testing:* Conducted informally with colleagues, this involves direct interaction with the system’s UI to complete specific deployment tasks, capturing real-time feedback and usability data.
 - *Performance Testing:*
-  - *Frontend Performance:* Using Google Lighthouse to systematically assess and document the frontend's performance under typical usage conditions.
-  - *Code Quality Assessment:* CodeFactor is employed to analyze the entire codebase, providing a detailed report on code health, identifying areas for improvement, and ensuring adherence to best coding practices.
+  - *Frontend Performance:* Using Google Lighthouse #footnote[https://developer.chrome.com/docs/lighthouse/overview] to systematically assess and document the frontend's performance under typical usage conditions.
+  - *Code Quality Assessment:* CodeFactor #footnote[https://codefactor.io/] is employed to analyze the entire codebase, providing a detailed report on code health, identifying areas for improvement, and ensuring adherence to best coding practices.
   - *Scalability Testing:* Load tests are performed manually to simulate multiple concurrent deployments, monitoring the system's response time and resource utilization under varying loads.
 
-== Test Results
+== Test Results #footnote[Results are attached in the appendices.]
 
 The results from the testing phase are critical in highlighting the system’s operational strengths and areas for improvement:
 
@@ -38,6 +40,8 @@ The results from the testing phase are critical in highlighting the system’s o
     - Total Blocking Time: 0ms
     - Cumulative Layout Shift: 0
     - Speed Index: 1.9s
+
+#pagebreak()
 
 - *Performance and Reliability:*
   - *Code Quality:* CodeFactor analysis revealed an overall "A" grade for the system's codebase with specific suggestions for reducing complexity in certain modules of the Kubernetes operator. The scan will be used to refine the codebase further. The current score is always available in the repository README's.

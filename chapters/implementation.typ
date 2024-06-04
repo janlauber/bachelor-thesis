@@ -259,11 +259,12 @@ Integration plays a critical role in the operational efficiency of the One-Click
 These integration strategies enhance the platform's flexibility and adaptability, making it suitable for various operational environments and user requirements.
 
 == Project Management
-To manage the development process efficiently, we used GitHub Projects, which provided a straightforward Kanban board for tracking progress. This tool was instrumental in organizing tasks, collecting feature requests, and prioritizing work based on user feedback and identified requirements. The use of GitHub Projects facilitated a clear and transparent workflow, enabling team members to collaborate effectively and stay aligned on project goals.
+To manage the development process efficiently, GitHub Projects was used, which provided a straightforward Kanban board for tracking progress. This tool was instrumental in organizing tasks, collecting feature requests, and prioritizing work based on user feedback and identified requirements. The use of GitHub Projects facilitated a clear and transparent workflow, enabling future contributors to collaborate effectively and stay aligned on project goals.
 
 - *Kanban Board*: The Kanban board in GitHub Projects allowed us to visualize the development process, track the status of tasks, and manage the flow of work. Features and tasks were categorized into columns such as "To Do," "In Progress," "Review," and "Done," providing a clear overview of the project's progress.
 - *Feature Collection*: Based on user feedback and requirements analysis, features were collected and added to the backlog. This ensured that user needs were continuously integrated into the development cycle, leading to a more user-centered product.
 - *Prioritization*: Tasks were prioritized according to their importance and impact, ensuring that critical features and fixes were addressed promptly. This approach helped maintain a focus on delivering high-value functionality in each iteration.
 
-By leveraging GitHub Projects as a project management tool, we were able to streamline the development process, enhance collaboration among team members, and deliver a user-friendly and robust One-Click Deployment system.
+By leveraging GitHub Projects as a project management tool, it was possible to streamline the development process.
+
 Also the use of GitHub Issues and Pull Requests was essential for tracking bugs, feature requests, and code changes, ensuring a structured and organized development process with a clear transparency for all users and contributors.

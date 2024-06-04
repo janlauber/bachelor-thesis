@@ -18,7 +18,7 @@ It is also a great way to deploy Streamlit applications rather than using the ho
 
 ==== Description
 
-Emanuel I. is a co-founder and full-stack developer for his web development agency unbrkn @UnbrknGmbH. He is working on some Node.js projects and currently hosting them on Vercel. However, he is looking for an alternative Hosting partner in Switzerland to ensure data sovereignty and compliance with local regulations. So he is looking for a simple and efficient way to deploy his Node.js projects without worrying about the underlying infrastructure. Because at Natron Tech @NatronTechAG we provide our customers managed Kubernetes clusters, he is looking for a solution that can be easily integrated with Kubernetes.
+Emanuel I. is a co-founder and full-stack developer for his web development agency unbrkn GmbH @UnbrknGmbH. He is working on some Node.js projects and currently hosting them on Vercel. However, he is looking for an alternative Hosting partner in Switzerland to ensure data sovereignty and compliance with local regulations. So he is looking for a simple and efficient way to deploy his Node.js projects without worrying about the underlying infrastructure. Because at Natron Tech @NatronTechAG we provide our customers managed Kubernetes clusters, he is looking for a solution that can be easily integrated with Kubernetes.
 
 ==== Feedback
 
