@@ -25,6 +25,18 @@ Despite its strengths, the One-Click Deployment system faces several limitations
 - *Dependency on Kubernetes Infrastructure*: The system's performance and scalability are heavily dependent on the underlying Kubernetes infrastructure. Any limitations or issues within the Kubernetes environment can directly impact the deployment system's effectiveness.
 - *Documentation and Learning Curve*: Although the system is designed to be user-friendly, new users still face a learning curve. Comprehensive documentation #footnote[https://docs.one-click.dev] is available, but the initial setup and advanced feature utilization may require additional support and learning resources.
 - *Security and Compliance*: While the system offers robust security features, ensuring compliance with evolving data protection regulations and security standards remains an ongoing challenge. Regular updates and enhancements are essential to address emerging threats and vulnerabilities. There is also a need for more advanced security concepts like *RBAC* and *Network Policies*.
-- *Complex Deployments*: Deploying applications which require specific configurations in Kubernetes can be challenging. Some use-cases can get covered by using the *advanced editing* feature, but more complex deployments might require manual intervention. There is a need for more advanced deployment templates and configurations or the user has to switch to native Kubernetes resources and deploy them with other tools (e.g. *helm*, *ArgoCD*, etc.).
 
-Addressing these limitations will be crucial for enhancing the system's usability and ensuring that it remains competitive in the rapidly evolving deployment landscape.
+#pagebreak()
+
+== Transition to Native Kubernetes
+The One-Click Deployment system simplifies Kubernetes deployments by abstracting the complexities involved. However, there are scenarios where transitioning to native Kubernetes might be necessary. These include:
+
+- *Highly Customized Configurations*: When the users application requires highly customized configurations that go beyond the capabilities of the One-Click Deployment system. Native Kubernetes provides more granular control over configurations and resources.
+
+- *Advanced Security Requirements*: For applications that require advanced security policies and compliance measures, native Kubernetes may offer more granular control. Features like *Network Policies* and *Pod Security Policies* can be better managed and enforced directly in Kubernetes.
+
+- *Performance Tuning*: In cases where fine-tuned performance optimization is needed, direct access to Kubernetes configurations can be beneficial. Users can tweak resource allocations, scheduling policies, and other performance-related settings more effectively in native Kubernetes.
+
+- *Large-Scale Deployments*: As the users application scales, you might encounter scenarios where native Kubernetes management provides better performance and resource utilization. 
+
+By recognizing these limitations and understanding when to transition to native Kubernetes, users can maximize the benefits of the One-Click Deployment system while preparing for future growth and complexity in their deployment needs.

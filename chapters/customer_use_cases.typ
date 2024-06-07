@@ -14,6 +14,8 @@ Coralie found the One-Click Deployment system to be a perfect solution for deplo
 
 It is also a great way to deploy Streamlit applications rather than using the hosted solution from Streamlit. The One-Click Deployment system provides more flexibility and control over the deployment process, allowing users to customize the deployment configuration based on their requirements.
 
+#pagebreak()
+
 === Use Case 2: Vercel Alternative for Node Projects
 
 ==== Description
@@ -23,6 +25,8 @@ Emanuel I. is a co-founder and full-stack developer for his web development agen
 ==== Feedback
 
 Emanuel found the One-Click Deployment system to be an excellent alternative to Vercel for hosting his Node.js projects. He appreciated the system's seamless integration with Kubernetes, allowing him to deploy his applications with minimal effort. The ability to customize the deployment configuration based on his requirements was a significant advantage, enabling him to tailor the deployment process to suit his needs. Emanuel was impressed by the system's ease of use and features, ensuring that his applications ran smoothly and efficiently. He found the user interface intuitive and easy to navigate, making the deployment process straightforward and hassle-free. Overall, he was pleased with the system's capabilities and the support provided, making it an ideal solution for hosting his Node.js projects.
+
+#pagebreak()
 
 === Use Case 3: Node-RED Deployment for IoT Projects
 

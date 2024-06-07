@@ -12,6 +12,8 @@ Evaluations across various real-world applications have demonstrated that the On
 
 The system's architecture is designed to evolve, anticipating future needs and technologies. Its current integration with Kubernetes provides a strong foundation for supporting emerging technologies and deployment strategies.
 
+#pagebreak()
+
 == Recommendations for Future Work
 
 To ensure the One-Click Deployment system continues to lead and innovate in deployment solutions, future work should focus on several strategic areas:
