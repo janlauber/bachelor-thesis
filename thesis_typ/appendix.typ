@@ -1,5 +1,1 @@
 #include("../appendix/meeting_log.typ")
-#pagebreak()
-#include("../appendix/code.typ")
-#pagebreak()
-#include("../appendix/additional_diagrams.typ")

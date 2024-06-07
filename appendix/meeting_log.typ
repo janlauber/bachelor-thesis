@@ -120,7 +120,7 @@
     - Automatic lifetime management of 12 months for VMs
   - One-Click as an enterprise edition:
     - Automatic cleanup and policy management
-    - Pricing between 5-10k EUR/year
+    - Pricing between 5-10k CHF/year
   - Identifying champions for the platform
 
 - Preparation and practice for the presentation:
@@ -139,3 +139,48 @@
 - Send the required PDF document
 - Make a book entry
 - Create and distribute a marketing video with the BFH logo
+
+=== 9.5.8 2024-06-05
+
+*Participants*
+- Jan Lauber
+- Erik Graf
+
+*Story of the presentation*
+- Begin the presentation from a developer's perspective.
+  - The developer discovers Node-RED and wants to deploy it.
+  - Show screenshots of overwhelming deployment setups (e.g., Azure Kubernetes Service).
+    - Highlight the complexity of Kubernetes.
+    - Transition to where people host their Kubernetes clusters.
+  - Start the second case with a custom development like Streamlit.
+- *Proposal Feedback:* Erik finds the proposal excellent.
+- *Iteration Process:* Discuss the numerous iterations the system has undergone.
+- *Power User Representation:* How to depict power users.
+- *Conventions:* What conventions the system adheres to.
+- *Limitations and Transition:*
+  - When to switch to native Kubernetes.
+- *Commercial Aspect:* Incorporating the commercial aspect into the story.
+
+*Documentation*
+- *GitHub Repository:* [Bachelor Thesis Repository](https://github.com/janlauber/bachelor-thesis)
+  - Should a lot of code be included? Erik suggests linking it.
+
+*Feedback*
+- *Commercial Deployment:* The system has been successfully deployed in a commercial setup.
+- *Knowledge for Kubernetes Deployment:*
+  - What does one need to know to deploy in Kubernetes?
+  - Main steps in bullet points.
+- *Gaps in Existing Solutions:*
+  - Provide concrete examples; it's quite complex.
+- *UX Design and Application Logic Description:*
+  - Move "4. Design goal" to "1. User Experience."
+  - Obscure other background processes.
+  - Focus on why and how we are doing this; emphasize "convention over configuration" (centralizing configuration).
+  - Project creation and monitoring.
+  - Main value for the user.
+  - Opinionated use cases.
+- *Screenshots:*
+  - Increase the prominence of user interaction.
+  - Better structure the presentation.
+
+*Page Count:* Approximately 60 pages.

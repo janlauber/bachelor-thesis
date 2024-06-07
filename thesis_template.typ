@@ -11,7 +11,7 @@
   body,
 ) = {
   set page(
-    margin: (left: 25mm, right: 25mm, top: 25mm, bottom: 25mm),
+    margin: (left: 30mm, right: 30mm, top: 30mm, bottom: 30mm),
     numbering: "1",
     number-align: center,
   )
