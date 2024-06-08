@@ -18,17 +18,19 @@ The development of the One-Click Deployment system followed an iterative and agi
 
 == Tools and Technologies Used
 The development of the One-Click Deployment system utilized a range of tools and technologies, selected for their efficiency, robustness, and compatibility with OSS deployment requirements.
-- *Kubernetes @Kubernetes*: As the backbone of the system, Kubernetes was used for orchestrating container deployment, scaling, and management.
-- *Docker @Docker2022*: Docker was employed for containerizing applications, ensuring consistency across different deployment environments.
-- *Operator SDK @OperatorSDK*: The Operator SDK facilitated the development of the Kubernetes operator, a key component of the system that automates the deployment and management processes.
-- *Svelte @Svelte and Pocketbase @PocketBase*: The frontend of the system was developed using Svelte, a modern framework for building web applications, while Pocketbase served as the backend database and API server.
-- *Git @Git and GitHub @GitHub*: Git was used for version control, with GitHub hosting the project's code repository and facilitating collaboration among developers.
+- *Kubernetes #footnote[https://kubernetes.io/]*: As the backbone of the system, Kubernetes was used for orchestrating container deployment, scaling, and management.
+- *Docker #footnote[https://docker.com]*: Docker was employed for containerizing applications, ensuring consistency across different deployment environments.
+- *Operator SDK #footnote[https://sdk.operatorframework.io/]*: The Operator SDK facilitated the development of the Kubernetes operator, a key component of the system that automates the deployment and management processes.
+- *Svelte #footnote[https://svelte.dev/] and Pocketbase #footnote[https://pocketbase.io]*: The frontend of the system was developed using Svelte, a modern framework for building web applications, while Pocketbase served as the backend database and API server.
+- *Git #footnote[https://git-scm.com/] and GitHub #footnote[https://git-scm.com/]Hub*: Git was used for version control, with GitHub hosting the project's code repository and facilitating collaboration among developers.
 - *CI/CD Tools*: Continuous Integration and Continuous Deployment were achieved using tools like GitHub Actions, automating the testing and deployment of code changes.
 By leveraging these tools and technologies, the One-Click Deployment system aims to provide a simplified, efficient, and scalable solution for OSS deployment, addressing the identified challenges and gaps in the current ecosystem.
 
+#pagebreak()
+
 == Open Source Availability
 
-The One-Click Deployment system is completely open source and is available under the Apache 2.0 license. The source code can be accessed through the following GitHub repositories:
+The One-Click Deployment system is completely open source and is available under the Apache 2.0 #footnote[https://apache.org/licenses/LICENSE-2.0] license. The source code can be accessed through the following GitHub repositories:
 
 - *One-Click Kubernetes Operator*: #link("https://github.com/janlauber/one-click-operator")
 - *One-Click Main Application*: #link("https://github.com/janlauber/one-click")

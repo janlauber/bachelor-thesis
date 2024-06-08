@@ -46,14 +46,14 @@
 === 2024-03-05
 *Participants*
 - Jan Lauber
-- Emanuel Imhof (Founder of Unbrkn GmbH @UnbrknGmbH)
+- Emanuel Imhof (Founder of Unbrkn GmbH #footnote[https://www.unbrkn.ch/])
 
 *Topics*
 - Presentation of the project and MVP
 - Emanuel Imhof's feedback on the project
   - Vercel Alternative for Node Projects
   - Remix project for Zermatt Tourism #sym.arrow.r #link("https://ggb-map.unbrkn.dev")
-- Shared Kubernetes cluster hosting at Natron Tech AG @NatronTechAG
+- Shared Kubernetes cluster hosting at Natron Tech AG #footnote[https://natron.ch]
 
 *Action Items*
 - User documentation for the project
@@ -93,7 +93,7 @@
 === 2024-05-03
 *Participants*
 - Jan Lauber
-- Emanuel Imhof (Founder of Unbrkn GmbH @UnbrknGmbH)
+- Emanuel Imhof (Founder of Unbrkn GmbH #footnote[https://www.unbrkn.ch/])
 
 *Topics*
 - Onboaring Emanuel Imhof on the One-Click Deployment system
@@ -140,7 +140,7 @@
 - Make a book entry
 - Create and distribute a marketing video with the BFH logo
 
-=== 9.5.8 2024-06-05
+=== 2024-06-05
 
 *Participants*
 - Jan Lauber

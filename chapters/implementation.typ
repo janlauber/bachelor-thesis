@@ -2,12 +2,12 @@
 
 == Development Environment Setup
 
-The development of the One-Click Deployment system necessitates a specifically configured environment to support the technologies used. This setup includes a Kubernetes cluster, which is central to deploying and managing containerized applications. Developers need to install Docker to containerize the application, ensuring consistent operation across different environments. The backend development leverages Go, requiring a Go environment setup, while the frontend uses Node.js and SvelteKit, necessitating the installation of Node.js and the appropriate npm packages. \
+The development of the One-Click Deployment system necessitates a specifically configured environment to support the technologies used. This setup includes a Kubernetes cluster, which is central to deploying and managing containerized applications. Developers need to install Docker to containerize the application, ensuring consistent operation across different environments. The backend development leverages Go, requiring a Go environment setup, while the frontend uses Node.js and SvelteKit #footnote[https://kit.svelte.dev/], necessitating the installation of Node.js and the appropriate npm packages. \
 The development environment setup involves:
-- A Kubernetes cluster either locally via Minikube or as a Managed Service at Natron Tech AG @NatronTechAG.
-- Docker installation for building and managing containers.
-- Node.js and npm to handle various frontend dependencies and build processes.
-- Go environment for backend development, set to the appropriate version to ensure compatibility with all dependencies and libraries used.
+- A Kubernetes cluster either locally via Minikube #footnote[https://minikube.sigs.k8s.io/docs/] or as a Managed Service at Natron Tech AG #footnote[https://natron.ch].
+- Docker #footnote[https://docker.com] installation for building and managing containers.
+- Node.js #footnote[https://nodejs.org/en] and npm #footnote[https://www.npmjs.com/] to handle various frontend dependencies and build processes.
+- Go #footnote[https://go.dev/] environment for backend development, set to the appropriate version to ensure compatibility with all dependencies and libraries used.
 
 These tools and setups form the backbone of the development infrastructure, providing a robust platform for building, testing, and deploying the system components efficiently.
 
@@ -23,19 +23,19 @@ The system also provides a real time monitoring of the deployed application. The
 
 The system also provides a rollback functionality. Each time the user changes the deployment configuration a new rollout gets triggered. The user can then see the old rollouts and the current one. The user can also rollback to a previous rollout. This functionality is like a snapshot of the deployment configuration at a specific time.
 
-With the implementation of the Kubernetes Operator, the system can by design be easily extended with new resources and functionalities. The system is also designed to be highly scalable and reliable. In the end the CRD (Custom Resource Definition) Rollout is the core abstraction of the system. Then the Kubernetes Operator takes care of the rest. To make this level of abstraction more accessible to the user, the system provides a web interface where the user can interact with the system and which it's core functionality is to create and manage Rollout resources.
+With the implementation of the Kubernetes Operator, the system can by design be easily extended with new resources and functionalities. The system is also designed to be highly scalable and reliable. In the end the CRD (Custom Resource Definition #footnote[https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/]) Rollout is the core abstraction of the system. Then the Kubernetes Operator takes care of the rest. To make this level of abstraction more accessible to the user, the system provides a web interface where the user can interact with the system and which it's core functionality is to create and manage Rollout resources.
 
 With this design goals in mind, the core functionality of the system was implemented.
+
+#pagebreak()
 
 === Deployment Module (Kubernetes Operator)
 
 The Kubernetes Operator within the One-Click Deployment platform acts as a core component, designed to simplify the management of deployments within the Kubernetes ecosystem. It automates the process of deploying, updating, and maintaining containerized applications. Using Custom Resource Definitions (CRDs), the operator allows users to define their applications in a declarative manner. \
 
-The development of this module involved using the Operator SDK @OperatorSDK, which provides tools and libraries to build Kubernetes operators in Go. This SDK facilitates the monitoring of resource states within the cluster, handling events such as creation, update, and deletion of resources.
+The development of this module involved using the Operator SDK #footnote[https://sdk.operatorframework.io/], which provides tools and libraries to build Kubernetes operators in Go. This SDK facilitates the monitoring of resource states within the cluster, handling events such as creation, update, and deletion of resources.
 
-In the #emph("controllers") directory of the #emph("one-click-operator repository") @lauberJanlauberOneclickoperator2024 on GitHub, the core functionality of the operator is implemented. This includes the reconciliation loop, which continuously monitors the state of resources and ensures that the desired state is maintained. The operator interacts with the Kubernetes API to create and manage resources, such as Deployments, Services, and ConfigMaps, based on the user-defined specifications.
-
-#pagebreak()
+In the #emph("controllers") directory of the #emph("one-click-operator repository") #footnote[https://github.com/janlauber/one-click-operator] on GitHub, the core functionality of the operator is implemented. This includes the reconciliation loop, which continuously monitors the state of resources and ensures that the desired state is maintained. The operator interacts with the Kubernetes API to create and manage resources, such as Deployments, Services, and ConfigMaps, based on the user-defined specifications.
 
 *Kubernetes Resources managed by the operator include:*
 - *ServiceAccount* #footnote[https://kubernetes.io/docs/concepts/security/service-accounts/]: A service account provides an identity for processes that run in a Pod.
@@ -275,11 +275,11 @@ The backend implementation is designed to provide a robust and efficient foundat
 
 === User Interface Implementation
 
-The user interface of the One-Click Deployment system is developed using Svelte @Svelte, a modern web framework that simplifies frontend development and enhances user experience. The frontend interface serves as the primary interaction point for users, allowing them to define and manage deployment projects easily.
+The user interface of the One-Click Deployment system is developed using Svelte #footnote[https://svelte.dev/], a modern web framework that simplifies frontend development and enhances user experience. The frontend interface serves as the primary interaction point for users, allowing them to define and manage deployment projects easily.
 
-The frontend codebase is structured to provide a dynamic and intuitive user experience, with components designed to facilitate project creation, application deployment, and configuration. The frontend interacts with the backend through RESTful APIs with the Pocketbase Javascript SDK @PocketbaseJssdk2024, enabling seamless communication between the user interface and the backend system. The frontend leverages Tailwind CSS @TailwindCSSRapidly2020 for styling and Flowbite-Svelte @FlowbiteSvelteUI for UI components, ensuring a consistent and visually appealing design.
+The frontend codebase is structured to provide a dynamic and intuitive user experience, with components designed to facilitate project creation, application deployment, and configuration. The frontend interacts with the backend through RESTful APIs with the Pocketbase Javascript SDK #footnote[https://pocketbase.io]Jssdk2024, enabling seamless communication between the user interface and the backend system. The frontend leverages Tailwind CSS #footnote[https://tailwindcss.com/] for styling and Flowbite-Svelte #footnote[https://flowbite-svelte.com/] for UI components, ensuring a consistent and visually appealing design.
 
-With SvelteKit as the frontend framework, the One-Click Deployment system benefits from Svelte's reactivity and SvelteKit's versatility, enabling the development of fast, responsive, and accessible web applications. TypeScript is used to enhance code reliability and maintainability, providing type safety and early error detection during development.
+With SvelteKit #footnote[https://kit.svelte.dev/] as the frontend framework, the One-Click Deployment system benefits from Svelte's reactivity and SvelteKit's versatility, enabling the development of fast, responsive, and accessible web applications. TypeScript is used to enhance code reliability and maintainability, providing type safety and early error detection during development.
 
 #pagebreak()
 
@@ -366,16 +366,14 @@ The user can move the components with his mouse, zoom in and out and dig into it
 Each time the user edits and changes something in a deployment a new rollout will get created. This is like a *snapshot* of the CRD configuration. This gives the user the power to undo any changes he did to his deployment configuration like changing the port of an interface or updating the container image tag. He can see every rollout in the rollouts table. Through the frontend the user can either delete or hide a rollout snapshot. If he deletes a rollout then it won't pop up on the overview page anymore. If he hides a rollout then it will still be there but not visible on the rollouts table.
 
 #figure(
-  image("../figures/rollouts.png", width: 80%),
+  image("../figures/rollouts.png", width: 75%),
   caption: "One-Click Deployment System Rollouts Table"
 )
-
-#pagebreak()
 
 When selecting a previous rollout the user can click on "rollback" and then a diff shows up which diffs the CRD files and show you exactly what will change:
 
 #figure(
-	image("../figures/rollouts-diff.png", width: 80%),
+	image("../figures/rollouts-diff.png", width: 75%),
 	caption: "One-Click Deployment System Diff"
 )
 

@@ -85,6 +85,10 @@
   pagebreak()
   heading(numbering: none)[Appendix A: Supplementary Material]
   include("thesis_typ/appendix.typ")
+  // Glossary.
+  pagebreak()
+  heading(numbering: none)[Glossary]
+  include("thesis_typ/glossary.typ")
 
   pagebreak()
   bibliography("thesis.bib")

@@ -9,7 +9,7 @@ The evaluation of the One-Click Deployment system employs precisely defined crit
   - *Lighthouse Testing:* Employing Google Lighthouse @monttiGoogleLighthouse2018 to evaluate the frontend performance, assessing metrics such as load times, interactivity, and the overall efficiency of the web interface.
 
 - *System Performance:*
-  - *Code Quality Analysis:* Utilizing CodeFactor @CodefactorAnalysisTools2022 to scrutinize the quality of the system's codebase, including the Kubernetes operator. This analysis helps identify potential issues in the code such as complexity, maintainability, and security vulnerabilities.
+  - *Code Quality Analysis:* Utilizing CodeFactor #footnote[https://support.codefactor.io/i24-analysis-tools-open-source] to scrutinize the quality of the system's codebase, including the Kubernetes operator. This analysis helps identify potential issues in the code such as complexity, maintainability, and security vulnerabilities.
   - *Scalability Testing:* Conducting load tests to evaluate the system's performance under varying loads, ensuring that it can handle multiple concurrent deployments without compromising performance.
 
 #pagebreak()

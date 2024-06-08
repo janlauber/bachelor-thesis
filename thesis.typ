@@ -4,6 +4,7 @@
 #import "thesis_typ/acknowledgement.typ": *
 #import "thesis_typ/abstract_en.typ": *
 #import "common/metadata.typ": *
+#import "@preview/glossarium:0.4.1": *
 
 
 #titlepage(
