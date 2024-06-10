@@ -12,7 +12,7 @@ Deploying and managing open-source software (OSS) has become increasingly comple
 Open-source software is a cornerstone of modern technology, driving innovation and providing essential tools for building robust systems. However, the complexity of deploying and managing these tools can be a significant barrier, particularly with Kubernetes. While Kubernetes offers powerful features for container management, its steep learning curve can be intimidating.
 
 === Concrete Example
-Imagine a developer who has built a data visualization tool using the open-source framework Streamlit #footnote[https://streamlit.io/] or a complex automation workflow using Node-RED #footnote[https://nodered.org/]. Initially, the developer considers deploying the application using Docker Compose, which involves creating and managing a *docker-compose.yml* file. However, this approach requires configuring a virtual machine (VM) and deciding on a cloud host or on-premise setup. The developer must also implement an SSL reverse proxy and consider vertical scaling and automatic updates every time a new Docker image is published.
+Imagine a developer who has built a data visualization tool using the open-source framework Streamlit #footnote[https://streamlit.io/] or a complex automation workflow using Node-RED #footnote[https://nodered.org/]. Initially, the developer considers deploying the application using Docker Compose, which involves creating and managing a docker-compose.yml file. However, this approach requires configuring a virtual machine (VM) and deciding on a cloud host or on-premise setup. The developer must also implement an SSL reverse proxy and consider vertical scaling and automatic updates every time a new Docker image is published.
 
 Faced with these challenges, the developer might turn to Kubernetes for its built-in solutions to these problems. Kubernetes provides tools for container orchestration, scaling, and managing configurations. However, the user soon realizes the difficulty of managing the deployment through numerous YAML files required for Kubernetes resources, such as deployments, services, ingress controllers, and more. This is where the One-Click Deployment system comes in, streamlining the deployment process and abstracting the complexity involved. \ \
 *Challenges*
@@ -51,19 +51,3 @@ The main objectives of this study are to design, develop, and evaluate the One-C
 - Assessing the impact of the One-Click Deployment system on the adoption and utilization of Kubernetes.
 - Collecting feedback from users to refine and enhance the system's features continuously.
 - Identifying opportunities for future research and development in Kubernetes deployment and management.
-
-#pagebreak()
-
-== Thesis Structure
-
-This thesis is structured as follows:
-- *Chapter 1: Introduction* - Sets the stage by outlining the context, challenges, and objectives.
-- *Chapter 2: Analysis of the Current Landscape and Challenges* - Provides an in-depth analysis of the current OSS deployment landscape, highlighting challenges and gaps that the One-Click Deployment system aims to address.
-- *Chapter 3: Methodology* - Describes the research and development methodologies employed to create the One-Click Deployment system.
-- *Chapter 4: System Design and Implementation* - Details the architectural design, technical stack, and implementation specifics of the One-Click Deployment system.
-- *Chapter 5: Implementation* - Discusses the implementation process, given by a defined design goal and the technical stack.
-- *Chapter 6: Evaluation and Testing* - Presents the evaluation criteria, testing methodologies, and results of the One-Click Deployment system.
-- *Chapter 7: Customer Use Cases and Feedback* - Explores real-world use cases and feedback from customers who have adopted the One-Click Deployment system.
-- *Chapter 8: Discussion* - Analyzes the findings, implications, and future directions of the One-Click Deployment system.
-- *Chapter 9: Conclusion* - Summarizes the key findings, contributions, and recommendations for future work.
-By following this structure, the thesis aims to provide a clear and comprehensive understanding of the challenges associated with Kubernetes deployment and how the One-Click Deployment system offers a user-friendly solution to overcome these barriers, making Kubernetes more accessible to a wider audience.

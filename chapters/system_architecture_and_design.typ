@@ -1,5 +1,5 @@
 = System Architecture and Design
-This chapter presents the architecture and design of the One-Click Deployment system, detailing the system overview, architectural components including backend and frontend, database design, and security considerations that underpin the system's effectiveness and efficiency in deploying open-source software (OSS).
+This chapter presents the architecture and design of the One-Click Deployment system, detailing the system overview, architectural components including backend and frontend, database design, and security considerations that underpin the system's effectiveness and efficiency in deploying OSS.
 
 == System Overview
 The following diagram shows how and what the One-Click operator manages.
