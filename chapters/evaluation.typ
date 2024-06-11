@@ -24,13 +24,13 @@ The methodology integrates specific software tools and manual testing to provide
   - *Code Quality Assessment:* CodeFactor #footnote[https://codefactor.io/] is employed to analyze the entire codebase, providing a detailed report on code health, identifying areas for improvement, and ensuring adherence to best coding practices.
   - *Scalability Testing:* Load tests are performed manually to simulate multiple concurrent deployments, monitoring the system's response time and resource utilization under varying loads.
 
-== Test Results #footnote[Results are attached in the appendices.]
+== Test Results
 
 The results from the testing phase are critical in highlighting the system’s operational strengths and areas for improvement:
 
 - *User Experience Results:*
   - *Task Completion:* Most participants successfully completed the tasks with minimal guidance, indicating a generally intuitive user interface. However, some noted minor confusion with more complex functionalities.
-  - *Lighthouse Scores:* The frontend achieved the following Lighthouse scores:
+  - *Lighthouse Scores:* (Appendix: @lighthouse) The frontend achieved the following Lighthouse scores:
     - Performance: 80
     - Accessibility: 92
     - Best Practices: 96

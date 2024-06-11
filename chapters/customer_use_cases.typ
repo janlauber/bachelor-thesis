@@ -6,7 +6,7 @@
 
 ==== Description
 
-Coralie R. is a data scientist at the University of applied science Bern. She is working on a project in which she has developed a Streamlit application for getting data from the user by providing a user-friendly interface which uses a llm model to predict the branche of someones job. She is looking for a simple and efficient way to deploy her Streamlit application without worrying about the underlying infrastructure.
+Coralie R. is a data scientist at the Bern University of Applied Sciences (BUAS). She is working on a project in which she has developed a Streamlit application for getting data from the user by providing a user-friendly interface which uses a llm model to predict the branche of someones job. She is looking for a simple and efficient way to deploy her Streamlit application without worrying about the underlying infrastructure.
 
 ==== Feedback
 

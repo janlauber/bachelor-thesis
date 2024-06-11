@@ -32,7 +32,7 @@
 
     Also, I would like to thank Emanuel Imhof, the founder of Unbrkn GmbH, for his valuable feedback and suggestions, which helped me improve the project significantly and deliver the features that users need.
 
-    A special thank you goes to my family, girlfriend and friends for their unwavering support and understanding during this journey. Lastly, I would like to thank the University of Applied Sciences at Bern for providing the resources and opportunities to pursue this research.
+    A special thank you goes to my family, girlfriend and friends for their unwavering support and understanding during this journey. Lastly, I would like to thank the Bern University of Applied Sciences (BUAS) for providing the resources and opportunities to pursue this research.
 
     Bern, 13.06.2024
     Jan Lauber

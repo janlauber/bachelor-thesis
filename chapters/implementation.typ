@@ -1,5 +1,12 @@
 = Implementation
 
+#show raw.where(block: false): box.with(
+  fill: luma(240),
+  inset: (x: 3pt, y: 0pt),
+  outset: (y: 3pt),
+  radius: 2pt,
+)
+
 == Development Environment Setup
 
 The development of the One-Click Deployment system necessitates a specifically configured environment to support the technologies used. This setup includes a Kubernetes cluster, which is central to deploying and managing containerized applications. Developers need to install Docker to containerize the application, ensuring consistent operation across different environments. The backend development leverages Go, requiring a Go environment setup, while the frontend uses Node.js and SvelteKit #footnote[https://kit.svelte.dev/], necessitating the installation of Node.js and the appropriate npm packages. \
@@ -35,8 +42,7 @@ The Kubernetes Operator within the One-Click Deployment platform acts as a core 
 
 The development of this module involved using the Operator SDK #footnote[https://sdk.operatorframework.io/], which provides tools and libraries to build Kubernetes operators in Go. This SDK facilitates the monitoring of resource states within the cluster, handling events such as creation, update, and deletion of resources.
 
-In the #emph("controllers") directory of the #emph("one-click-operator repository") #footnote[https://github.com/janlauber/one-click-operator] on GitHub, the core functionality of the operator is implemented. This includes the reconciliation loop, which continuously monitors the state of resources and ensures that the desired state is maintained. The operator interacts with the Kubernetes API to create and manage resources, such as Deployments, Services, and ConfigMaps, based on the user-defined specifications.
-
+In the #emph("controllers") directory of the #emph("one-click-operator repository") #footnote[https://github.com/janlauber/one-click-operator] on GitHub, the core functionality of the operator is implemented. This includes the reconciliation loop, which continuously monitors the state of resources and ensures that the desired state is maintained. The operator interacts with the Kubernetes API to create and manage resources, such as Deployments, Services, and ConfigMaps, based on the user-defined specifications. \ \
 *Kubernetes Resources managed by the operator include:*
 - *ServiceAccount* #footnote[https://kubernetes.io/docs/concepts/security/service-accounts/]: A service account provides an identity for processes that run in a Pod.
 - *PersistentVolumeClaim (PVC)* #footnote[https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims]: A PVC is a request for storage by a user.
@@ -53,6 +59,13 @@ All these resources are managed by the operator based on the user-defined specif
 
 The *rollout_controller.go* @OneclickoperatorControllersRollout_controller is the primary controller responsible for managing Rollout resources.
 The following code snippets illustrate the core functionality of the deployment module:
+
+#set text(8pt)
+#show raw.where(block: true): block.with(
+  fill: luma(240),
+  inset: 10pt,
+  radius: 4pt,
+)
 
 ```go
 // RolloutReconciler reconciles a Rollout object
@@ -122,11 +135,22 @@ func (r *RolloutReconciler) SetupWithManager(mgr ctrl.Manager) error {
 }
 ```
 
+#set text(12pt)
+
 The reconciliation loop continuously monitors the state of Rollout resources, ensuring that the desired state is maintained. The controller reconciles various resources, such as ServiceAccounts, PVCs, Secrets, Deployments, Cronjobs, Services, Ingress, and HPAs, based on the user-defined specifications. The *SetupWithManager* function sets up the controller with the Manager, instructing the manager to start the controller when the Manager is started.
+
+#pagebreak()
 
 ==== Rollout Resource Specification <crd>
 
 The core abstraction happens in the Rollout specification definition. This yaml structure was designed with our design goals in mind. The user or web interface then only has to interact with this structure to deploy and manage applications. The following yaml snippet illustrates the Rollout resource specification:
+
+#set text(8pt)
+#show raw.where(block: true): block.with(
+  fill: luma(240),
+  inset: 10pt,
+  radius: 4pt,
+)
 
 ```yaml
 apiVersion: one-click.dev/v1alpha1 # current version of the CRD
@@ -234,11 +258,31 @@ spec:
   serviceAccountName: "nginx"
 ```
 
+#set text(12pt)
+
+Here's a brief overview of the key components:
+
+- `apiVersion` and `kind`: These fields specify the version and type of the Kubernetes Custom Resource Definition (CRD). In this case, the CRD is a *Rollout*.
+- `metadata`: This section includes the name of the Rollout and the namespace where it will be created. There are also optional fields for labels and annotations. #footnote[https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#metadata]
+- `spec`: This is the heart of the Rollout, containing all the configuration details for the deployment. It includes:
+  - `args` and `command`: These optional fields specify the arguments and command for the container.
+  - `rolloutStrategy`: This field determines the strategy for updating the pods. It can be either *rollingUpdate* or *recreate*.
+  - `nodeSelector` and `tolerations`: These optional fields allow you to control where the pods are scheduled and what conditions they can tolerate.
+  - `image`: This section specifies the container image details, including the registry, repository, tag, and credentials.
+  - `securityContext`: This optional section defines the security settings for the container.
+  - `horizontalScale`: This section configures the horizontal scaling of the pods.
+  - `resources`: This section sets the CPU and memory limits and requests for the container.
+  - `env` and `secrets`: These sections define the environment variables and secret environment variables for the container.
+  - `volumes`: This section configures persistent volumes for the container.
+  - `interfaces`: This section sets up the network interfaces for the container.
+  - `cronjobs`: This section allows you to define cronjobs for the container.
+  - `serviceAccountName`: This field specifies the service account associated with the Rollout.
+
 The deployment module is a critical component of the One-Click Deployment system, automating the deployment and management of containerized applications within the Kubernetes environment. The operator simplifies complex tasks, streamlining the deployment process and ensuring efficient system operations.
 
 #pagebreak()
 
-=== Backend Implementation
+== Backend Implementation
 
 The backend of the One-Click Deployment system is built using Pocketbase #footnote[https://pocketbase.io], an open-source platform that simplifies backend development and deployment. The backend system handles user authentication, data storage, and interactions with the Kubernetes cluster. The backend codebase is written in Go, leveraging the flexibility and performance of the language to manage the system's core functionalities. Also go is the language of the whole Kubernetes ecosystem, so it was a natural choice to use it for the backend because all the standard libraries and tools are available in go.
 
@@ -247,6 +291,13 @@ The backend interacts with the Kubernetes API to creates and manages the logical
 The backend codebase is structured to handle various API endpoints, each responsible for specific operations, such as user authentication, project creation, and Rollout management. The backend interacts with the frontend through RESTful APIs, processing requests and returning appropriate responses based on the system's state and user input.
 
 The following code snippet of the *main.go* @OneclickPocketbaseMain demonstrates the implementation of a backend API endpoint for creating a new project:
+
+#set text(8pt)
+#show raw.where(block: true): block.with(
+  fill: luma(240),
+  inset: 10pt,
+  radius: 4pt,
+)
 
 ```go
 [...]
@@ -269,11 +320,13 @@ func main() {
 }
 ```
 
+#set text(12pt)
+
 The code snippet demonstrates the event handling mechanism in Pocketbase, where the backend listens for incoming requests to create a new Rollout object. Upon receiving the request, the backend triggers the Rollout creation process in the Kubernetes cluster, initiating the deployment of the specified application.
 
 The backend implementation is designed to provide a robust and efficient foundation for the One-Click Deployment system, enabling seamless interactions between the frontend, backend, and Kubernetes environment.
 
-=== User Interface Implementation
+== User Interface Implementation
 
 The user interface of the One-Click Deployment system is developed using Svelte #footnote[https://svelte.dev/], a modern web framework that simplifies frontend development and enhances user experience. The frontend interface serves as the primary interaction point for users, allowing them to define and manage deployment projects easily.
 
@@ -291,7 +344,7 @@ The user interface of the One-Click Deployment system features a clean and intui
 In One-Click the user can create a new project or manage existing ones. Each project will get a unique *ID* which will be used to identify the project inside the Kubernetes cluster. The project will also get a unique *namespace* in the Kubernetes cluster which has the same name as the project *ID*.
 
 #figure(
-  image("../figures/projects-overview.png", width: 80%),
+  image("../figures/projects-overview.png", width: 100%),
   caption: "One-Click Deployment System Projects Overview"
 )
 
@@ -314,15 +367,17 @@ There will be a Kubernetes namespace each One-Click project with certain labels:
 In the project overview, the user can see all the deployments in this project. He can also navigate to the Blueprints, create a new Deployment or make some project settings. In the listed deployments, he can see the deployment name, status, URL (if configured), the last rollout time, number of replicas, and current deployed docker image.
 
 #figure(
-  image("../figures/deployments-overview.png", width: 80%),
+  image("../figures/deployments-overview.png", width: 100%),
   caption: "One-Click Deployment System Deployments Overview"
 )
+
+\
 
 ==== Blueprints
 Blueprints are stored configurations of a One-Click CRD (@crd). With these blueprints the user can easily bootstrap new projects with no effort. The use cases are for example to predifine some enhanced configurations in his rollout crd yaml file which then get automatically applied when creating a new project out of this blueprint.
 
 #figure(
-  image("../figures/blueprints.png", width: 80%),
+  image("../figures/blueprints.png", width: 100%),
   caption: "One-Click Deployment System Blueprints"
 )
 
@@ -332,7 +387,7 @@ Blueprints are stored configurations of a One-Click CRD (@crd). With these bluep
 When selecting or creating a new deployment within a project, users will land on the deployment overview page, as shown in the following screenshot:
 
 #figure(
-  image("../figures/deployment-overview.png", width: 80%),
+  image("../figures/deployment-overview.png", width: 100%),
   caption: "One-Click Deployment System Streamlit Deployment Overview"
 )
 
@@ -345,7 +400,7 @@ The deployment overview page displays high level information and stats about the
 The map shows real time Kubernetes resources generated by the deployment, such as pods, services, ingresses, and persistent volume claims etc.
 
 #figure(
-  image("../figures/map.png", width: 80%),
+  image("../figures/map.png", width: 100%),
   caption: "One-Click Deployment System Map"
 )
 
@@ -356,7 +411,7 @@ The map feature in a deployment uses svelte-flow #footnote[https://svelteflow.de
 The user can move the components with his mouse, zoom in and out and dig into its `manifests` / `logs` / `events` when click on a component.
 
 #figure(
-  image("../figures/map-drawer.png", width: 80%),
+  image("../figures/map-drawer.png", width: 100%),
   caption: "One-Click Deployment System Map Drawer"
 )
 
@@ -366,14 +421,17 @@ The user can move the components with his mouse, zoom in and out and dig into it
 Each time the user edits and changes something in a deployment a new rollout will get created. This is like a *snapshot* of the CRD configuration. This gives the user the power to undo any changes he did to his deployment configuration like changing the port of an interface or updating the container image tag. He can see every rollout in the rollouts table. Through the frontend the user can either delete or hide a rollout snapshot. If he deletes a rollout then it won't pop up on the overview page anymore. If he hides a rollout then it will still be there but not visible on the rollouts table.
 
 #figure(
-  image("../figures/rollouts.png", width: 75%),
+  image("../figures/rollouts.png", width: 100%),
   caption: "One-Click Deployment System Rollouts Table"
 )
 
-When selecting a previous rollout the user can click on "rollback" and then a diff shows up which diffs the CRD files and show you exactly what will change:
+#pagebreak()
+
+When selecting a previous rollout the user can click on "rollback" and then a diff shows up which diffs the CRD files and show you exactly what will change.
+This is a powerful feature because the user can see what will change before he actually rolls back to a previous rollout. He can also refer to a previous rollout if he wants to see what was the configuration at that time.
 
 #figure(
-	image("../figures/rollouts-diff.png", width: 75%),
+	image("../figures/rollouts-diff.png", width: 100%),
 	caption: "One-Click Deployment System Diff"
 )
 
@@ -383,7 +441,7 @@ When selecting a previous rollout the user can click on "rollback" and then a di
 Under images, the management of the deployment image is possible. Configuration of the registry (e.g., ghcr.io, docker.io), along with specifying username and password for private registries, and the repository/image are supported. Additionally, defining the image tag is an option. For debugging purposes, copying the current rollout ID allows for searching components within the Kubernetes cluster.
 
 #figure(
-	image("../figures/image.png", width: 75%),
+	image("../figures/image.png", width: 100%),
 	caption: "One-Click Deployment System Container Image"
 )
 
@@ -411,7 +469,7 @@ The concept and behavior mirror those found in fluxcd, as outlined in their guid
 On the scale page, configuration options are available for both horizontal and vertical scaling. Horizontal scaling adjusts the number of instances (replicas), while vertical scaling involves setting CPU and memory requests and limits.
 
 #figure(
-	image("../figures/scale.png", width: 75%),
+	image("../figures/scale.png", width: 100%),
 	caption: "One-Click Deployment System Scaling"
 )
 
@@ -432,11 +490,14 @@ To create a new network interface, select the "New Interface" button. The config
 -	*path*: Access path for the interface (e.g., `/api`, `/`).
 -	*tls*: Toggle to enable TLS and specify the secret name for the TLS certificate.
 	-	*tls secret name*: If left unspecified, defaults to the host name. This setting allows for automatic TLS certificate generation using cert-manager annotations #footnote[https://cert-manager.io/docs/usage/ingress/].
+
+#pagebreak()
+
 The DNS name corresponds to the Kubernetes Service name in the cluster, which other deployments can use for DNS lookups. The DNS name can be copied using the copy icon.
 Setting the ingress class to none, removing the host and path, and disabling TLS will result in the deletion of the ingress and creation of the service for internal network exposure only.
 
 #figure(
-	image("../figures/network.png", width: 75%),
+	image("../figures/network.png", width: 100%),
 	caption: "One-Click Deployment System Networking"
 )
 
@@ -452,7 +513,7 @@ Configurable options for volumes include:
 Once created, the size and storage class of a volume cannot be changed. If a change is necessary, a new volume must be created, and the data migrated to it.
 
 #figure(
-	image("../figures/volumes.png", width: 75%),
+	image("../figures/volumes.png", width: 100%),
 	caption: "One-Click Deployment System Volumes"
 )
 
@@ -465,15 +526,17 @@ Environment variables and secrets are accessible within the container as environ
 
 
 #figure(
-	image("../figures/volumes.png", width: 75%),
+	image("../figures/volumes.png", width: 100%),
 	caption: "One-Click Deployment System Environment Variables"
 )
+
+#pagebreak()
 
 ==== Deployment Settings
 In the deployment settings the user can change it's name or avatar. He can also use the advanced editing mode to edit the CRD of the deployment directly. It's also possible to create new blueprint out of the current deployment configuration. The blueprint can then be used to create new deployments with the same configuration. The user can also delete the deployment.
 
 #figure(
-	image("../figures/deployment-settings.png", width: 75%),
+	image("../figures/deployment-settings.png", width: 100%),
 	caption: "One-Click Deployment System Deployment Settings"
 )
 

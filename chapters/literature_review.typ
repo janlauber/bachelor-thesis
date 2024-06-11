@@ -1,6 +1,6 @@
 = Analysis of the Current Landscape and Challenges
 
-This chapter analyzes the current landscape of OSS deployment, highlighting key technologies in use, prevalent challenges, and gaps that the One-Click Deployment system seeks to address. The analysis and insights are derived from *Project 2*, also conducted at the University of Applied Sciences at Bern by Jan Lauber @lauberProjectOneClickDeployment2024.
+This chapter analyzes the current landscape of OSS deployment, highlighting key technologies in use, prevalent challenges, and gaps that the One-Click Deployment system seeks to address. The analysis and insights are derived from *Project 2*, also conducted at the Bern University of Applied Sciences (BUAS) by Jan Lauber @lauberProjectOneClickDeployment2024.
 
 == Overview of Open-Source Software & Deployment
 
