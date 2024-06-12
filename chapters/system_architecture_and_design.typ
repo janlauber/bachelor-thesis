@@ -63,7 +63,7 @@ A set of environment variables is defined to configure the system's operation, s
 === Frontend Architecture
 The frontend of the One-Click Deployment system is thoughtfully designed to offer a dynamic, user-friendly interface, allowing for an intuitive experience in managing open-source software deployment processes. Built on SvelteKit and augmented with TypeScript, it employs Tailwind CSS for styling and incorporates Flowbite-Svelte for UI components. The frontend leverages the Pocketbase JavaScript SDK for seamless backend interaction. Notably, the frontend's entire codebase—comprising JavaScript, HTML, and CSS—is compiled into optimized static files. These static assets are then served in conjunction with the Pocketbase backend within the same container, highlighting the system's streamlined deployment strategy.
 
-==== SveteKit #footnote[https://kit.svelte.dev/]
+==== SvelteKit #footnote[https://kit.svelte.dev/]
 Utilizing SvelteKit as the frontend framework enables the One-Click Deployment system to harness Svelte's reactivity and SvelteKit's versatility for building sophisticated web applications. SvelteKit's support for server-side rendering, static site generation, and single-page applications ensures that the frontend is fast, responsive, and accessible across all devices and network conditions.
 
 ==== TypeScript #footnote[https://www.typescriptlang.org/]

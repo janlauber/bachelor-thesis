@@ -459,7 +459,7 @@ The concept and behavior mirror those found in fluxcd, as outlined in their guid
 	[`^\d+.\d+.\d+$`], [semver], [Default x.x.x semver pattern. e.g. 1.2.0 will get updated to 1.2.1],
 	[`dev-\d+.\d+.\d+$`], [semver], [Custom pattern for *dev* versions. e.g. dev-1.2.0 will get updated to dev-1.2.1],
 	[`.*`], [timestamp], [Any pattern will get updated with a *unix* timestamp.],
-	[`preview-*`], [timestamp], [A pattern with the *preview-* prefix which will get udpated with a *unix* timestamp.]
+	[`preview-*`], [timestamp], [A pattern with the *preview-* prefix which will get updated with a *unix* timestamp.]
 )
 #set align(left)
 
